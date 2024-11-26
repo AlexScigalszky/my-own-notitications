@@ -1,4 +1,2 @@
-[functions]
-[functions.schedule]
-  path = "/.netlify/functions/taskNotifier"
-  cron = "0 1 * * *" # Ejecutar a las 9:00 AM todos los días
+[functions."tasks-notifier"]
+schedule = "@daily"
