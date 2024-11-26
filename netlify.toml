@@ -1,2 +1,2 @@
 [functions."tasks-notifier"]
-schedule = "@daily"
+schedule = "*/10 * * * *"
