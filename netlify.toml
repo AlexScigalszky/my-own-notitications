@@ -1,2 +1,2 @@
 [functions."tasks-notifier"]
-schedule = "@hourly"
+schedule = "*/10 * * * *"
