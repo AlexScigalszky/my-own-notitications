@@ -5,6 +5,7 @@ exports.handler = async () => {
         console.log("starting..");
         // Lógica de tu tarea
         const resultado = "Resultado de tu tarea genérica";
+        const asunto = "Alex's Notifier"
 
         // Configuración de nodemailer para enviar el correo
         const transporter = nodemailer.createTransport({
