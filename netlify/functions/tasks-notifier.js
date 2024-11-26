@@ -1,11 +1,13 @@
 const nodemailer = require('nodemailer');
+const { alejandra } = require('./tasks/alejandra-peralta');
 
 exports.handler = async () => {
     try {
         console.log("starting..");
         // Lógica de tu tarea
-        const resultado = "Resultado de tu tarea genérica";
-        const asunto = "Alex's Notifier"
+        const result = alejandra.execute();
+        const resultado = result?.resultado ?? "Resultado de tu tarea genérica";
+        const asunto = result?.asunto ?? "Alex's Notifier";
 
         // Configuración de nodemailer para enviar el correo
         const transporter = nodemailer.createTransport({
