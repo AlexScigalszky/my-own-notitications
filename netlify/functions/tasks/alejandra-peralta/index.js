@@ -79,7 +79,7 @@ async function scrapeProperties(url) {
 
     return {
         resultado: JSON.stringify(interested_properties),
-        asunto: "Alex's Notifier: Menos de U$D10.000"
+        asunto: "Alejandra Peralta: Menos de USD 10.000"
     }
 }
 
