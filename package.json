@@ -1,0 +1,14 @@
+{
+  "name": "my-own-notitications",
+  "version": "1.0.0",
+  "description": "my own notification system where I can send an email for my own task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}
