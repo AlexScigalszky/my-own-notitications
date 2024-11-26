@@ -1,4 +1,5 @@
-const puppeteer = require('puppeteer');
+const chromium = require('chrome-aws-lambda');
+const puppeteer = require('puppeteer-core');
 const cheerio = require('cheerio');
 // const fs = require('fs');
 
@@ -22,7 +23,12 @@ async function scrollToBottom(page) {
 }
 
 async function scrapeProperties(url) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath,
+        headless: chromium.headless,
+    });
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle2' });
     // Hacer clic 30 veces en el botón "Cargar más"
