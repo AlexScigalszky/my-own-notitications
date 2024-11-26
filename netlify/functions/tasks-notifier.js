@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer');
 
 exports.handler = async () => {
     try {
+        console.log("starting..");
         // Lógica de tu tarea
         const resultado = "Resultado de tu tarea genérica";
 
@@ -21,8 +22,10 @@ exports.handler = async () => {
             html: resultado
         });
 
+        console.log("Notificación enviada con éxito");
         return { statusCode: 200, body: "Notificación enviada con éxito" };
     } catch (error) {
+        console.log(`Error: ${error.message}`);
         return { statusCode: 500, body: `Error: ${error.message}` };
     }
 };
